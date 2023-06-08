@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #121111;
+  overflow-x: hidden;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+
+@layer components {
+  .input-text{
+    @apply bg-transparent text-slate-300 pl-3 h-[40px] w-full border-b-2 border-slate-200 outline-none focus:border-b-teal-400 duration-500 disabled:text-slate-500 disabled:border-b-slate-500
+  }
+
+  .input-number {
+    @apply bg-transparent max-w-[120px] text-slate-300 pl-3 outline-none focus:text-teal-400 duration-500 disabled:text-slate-500
+  }
+
+  .label-input-text {
+    @apply absolute bottom-2 left-3 text-slate-300 group-focus-within:text-teal-400 group-focus-within:text-sm group-focus-within:bottom-8 duration-500 ease-in-out
+  }
+
+  .label-input-number{
+    @apply pl-3 text-slate-300 group-focus-within:text-teal-400 duration-500
+  }
+
+  .button-style{
+    @apply bg-red-500 flex gap-2 justify-center items-center text-white p-4 rounded-xl hover:-translate-y-1 hover:scale-105 active:scale-95 duration-300 ease-in-out text-lg font-light whitespace-nowrap disabled:bg-red-900 disabled:hover:translate-y-0 disabled:hover:scale-100
+  }
+
+  .edit-button-style {
+    @apply px-3 py-2 bg-red-500 text-white text-sm rounded-xl hover:-translate-y-1 hover:scale-105 active:scale-95 duration-200 ease-in-out
+  }
+
+  .submit-button-style{
+    @apply px-3 py-2 bg-green-500 text-white text-sm rounded-xl hover:-translate-y-1 hover:scale-105 active:scale-95 duration-200 ease-in-out disabled:bg-green-800 enabled:inline-flex  disabled:hidden disabled:hover:translate-y-0 disabled:hover:scale-100
+  }
+}
